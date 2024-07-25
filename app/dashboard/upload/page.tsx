@@ -4,7 +4,6 @@ function page() {
   return (
     <div>
         <FileUploader></FileUploader>
-        
     </div>
   )
 }

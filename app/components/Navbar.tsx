@@ -1,6 +1,6 @@
 import React from 'react'
-import { FilePlus2, UserIcon } from 'lucide-react'
-import { SignedIn, SignIn, UserButton } from '@clerk/nextjs'
+import { FilePlus2,  } from 'lucide-react'
+import { SignedIn,  UserButton } from '@clerk/nextjs'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 function Navbar() {

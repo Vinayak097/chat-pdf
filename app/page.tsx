@@ -3,8 +3,7 @@ import {
   BrainCogIcon,
   EyeIcon,
   GlobeIcon,
-  MonitorSmartphoneIcon,
-  ServerCogIcon,
+  
   ZapIcon
 } from 'lucide-react'
 import { Button } from "@/components/ui/button";
@@ -74,7 +73,7 @@ export default function Home() {
                 
                   <dt className="flex gap-2 font-semibold  shadow-md">
                     <item.icon className="size-10"></item.icon>
-                    <div><p>{item.name}</p>
+                    <div key={item.name}><p>{item.name}</p>
                     <p className="text-gray-900">{item.description}</p></div>
                   </dt>
 
