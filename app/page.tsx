@@ -3,7 +3,6 @@ import {
   BrainCogIcon,
   EyeIcon,
   GlobeIcon,
-  
   ZapIcon
 } from 'lucide-react'
 import { Button } from "@/components/ui/button";
@@ -71,9 +70,9 @@ export default function Home() {
               <dl className="grid sm:grid-cols-2 gap-2 grid-cols-1 lg:grid-cols-3 ">
                 {features.map((item)=>
                 
-                  <dt className="flex gap-2 font-semibold  shadow-md">
+                  <dt key={item.name} className="flex gap-2 font-semibold  shadow-md">
                     <item.icon className="size-10"></item.icon>
-                    <div key={item.name}><p>{item.name}</p>
+                    <div ><p>{item.name}</p>
                     <p className="text-gray-900">{item.description}</p></div>
                   </dt>
 
