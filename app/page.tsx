@@ -75,7 +75,6 @@ export default function Home() {
                     <div ><p>{item.name}</p>
                     <p className="text-gray-900">{item.description}</p></div>
                   </dt>
-
                 )}
               </dl>
             </div>
