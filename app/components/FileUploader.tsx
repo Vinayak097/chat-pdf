@@ -13,11 +13,12 @@ import useUpload from "@/hooks/useUpload";
 import { CircleArrowDown, RocketIcon } from "lucide-react";
 
 function FileUploader() {
-  const { progress, status, fileId, handleUpload }:any = useUpload();
+  const { progress, status, fileId, handleUpload }:any =  useUpload();
   const router = useRouter();
 
   useEffect(() => {
     if (fileId) {
+      console.log(fileId , ' filed id ')
       router.push(`/dashboard/file/${fileId}`);
     }
   }, [fileId, router]);

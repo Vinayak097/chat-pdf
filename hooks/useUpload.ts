@@ -2,12 +2,13 @@
 
 import { useUser } from "@clerk/nextjs";    
 import { db, storage } from "@/firebase";
-import { useRouter } from "next/navigation";
+
 import { useState } from "react";
 import {ref, uploadBytesResumable} from "firebase/storage"
 import {v4 as uuidv4} from "uuid";
 import { getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
+import { generateEmbeddings } from "@/actions/generateEmbeddings";
 
 
 export enum StatusText{
@@ -60,6 +61,7 @@ function useUpload(){
             })
             console.log('file uploded and collection crated ')
             setStatus(StatusText.GENERATING)
+            await generateEmbeddings(fileIdToUploadTo);
             setfileId(fileIdToUploadTo)
         })
     }

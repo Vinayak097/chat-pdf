@@ -31,7 +31,7 @@ const features=[
 ]
 export default function Home() {
   return (
-     <main className="flex-1  overflow-scroll bg-gradient-to-bl from-white to-amber-600 p-2 lg:p-4 md:p-3 sm:p-2">
+     <main className="flex-1  overflow-scroll bg-gradient-to-bl from-white to-amber-600 p-2 lg:p-4 md:p-3 sm:p-2 h-full">
       <div className="bg-white py-24  sm:py-32 rounded-md drop-shadow-xl">
         <div className="flex flex-col justify-center items-center mx-auto max-7xl px-6 lg:px-8 ">
           <div className="mx-auto max-w-2xl sm:text-center">

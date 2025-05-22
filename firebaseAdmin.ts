@@ -1,13 +1,18 @@
 import { initializeApp ,getApps,App,getApp,cert} from "firebase-admin/app";
 import { getFirestore } from "firebase-admin/firestore";
 import { getStorage } from "firebase-admin/storage";
+import servicekey from "./service_key.json" with { type: "json" };
 
-const servicekey=require("@service_key.json");
+
 let app:App;
 
 if(getApps().length==0){
     app=initializeApp({
-        credential:cert(servicekey)
+        credential: cert({
+            projectId: servicekey.project_id,
+            clientEmail: servicekey.client_email,
+            privateKey: servicekey.private_key,
+        }),
     });
 }else{
     app=getApp();
