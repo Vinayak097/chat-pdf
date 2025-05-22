@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PdfView = () => {
+const PdfView = ({url}:{url:string}) => {
   return (
     <div>PdfView</div>
   )

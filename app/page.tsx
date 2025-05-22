@@ -29,6 +29,36 @@ const features=[
     icon:EyeIcon
   }
 ]
+import {
+  BrainCogIcon,
+  EyeIcon,
+  GlobeIcon,
+  ZapIcon
+} from 'lucide-react'
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+const features=[
+  {
+    name:"store your pdf Doucuments",
+    description:"keep all your important PDF files securely stored and easily accessible anytime,anywhere",
+    icon:GlobeIcon,
+  },
+  {
+    name:"Blazing Fast Responses",
+    description:"Experience lightning-fast answers to your queries, ensuring you get the information you need instatnly",
+    icon:ZapIcon
+  },
+  {
+    name:"Chat Memorisation",
+    description:"Our intelligent chatbot remembers previos interactions ,providing a seamless and personalized exprience ",
+    icon:BrainCogIcon
+  },
+  {
+    name:"Interactive PDF Viewer",
+    description:"Engage with your PDFs like never before using our intuitive and interactive viewer",
+    icon:EyeIcon
+  }
+]
 export default function Home() {
   return (
      <main className="flex-1  overflow-scroll bg-gradient-to-bl from-white to-amber-600 p-2 lg:p-4 md:p-3 sm:p-2 h-full">
@@ -78,11 +108,28 @@ export default function Home() {
                 )}
               </dl>
             </div>
+            <div className=" mt-14 ">
+              <dl className="grid sm:grid-cols-2 gap-2 grid-cols-1 lg:grid-cols-3 ">
+                {features.map((item)=>
+                
+                  <dt key={item.name} className="flex gap-2 font-semibold  shadow-md">
+                    <item.icon className="size-10"></item.icon>
+                    <div ><p>{item.name}</p>
+                    <p className="text-gray-900">{item.description}</p></div>
+                  </dt>
+                )}
+              </dl>
+            </div>
 
+          </div>
+        </div>
           </div>
         </div>
       </div>
     </main>
+
+      
+    
 
       
     
