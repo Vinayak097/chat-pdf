@@ -5,4 +5,4 @@ async function GET(request:NextRequest) {
     const fileId=request.headers;
     adminDb.collection('files')
 
-}
+}   
